@@ -1,0 +1,28 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "first_name": "Bob",
+      "last_name": "Smith",
+      "email": "bobs@mock-api.com"
+    },
+    {
+      "id": 2,
+      "first_name": "Steve",
+      "last_name": "Steve",
+      "email": "steve@mock-api.com"
+    },
+    {
+      "id": 3,
+      "first_name": "Emma",
+      "last_name": "Bunting",
+      "email": "emmab@mock-api.com"
+    },
+    {
+        "id": 4,
+        "first_name": "Fred",
+        "last_name": "Flintstone",
+        "email": "fredf@mock-api.com"
+      }
+  ]
+}
