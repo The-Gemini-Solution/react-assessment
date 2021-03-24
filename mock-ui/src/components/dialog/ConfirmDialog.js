@@ -9,14 +9,18 @@ const buttonStyle = {
 
 class ConfirmDialog extends Component {
     
-    open = () => {
-        this.setState({ isOpen: true });
+    open = (title, description) => {
+        this.setState({ 
+            isOpen: true,
+            title,
+            description
+        });
     }
     close = (cancelled) => {
         this.setState({ isOpen: false });
         
-        if (this.props.onDismiss) {
-            this.props.onDismiss(cancelled);
+        if (this.props.onCancel) {
+            this.props.onCancel(cancelled);
         }
     }
 
@@ -31,10 +35,10 @@ class ConfirmDialog extends Component {
         return (
             <div>
             { this.state.isOpen && (
-                <Dialog onDismiss={this.close} aria-label="confirm-dialog">
-                    <h1>{this.props.title}</h1>
-                    <p>{this.props.description}</p>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <Dialog onCancel={this.close} aria-label="confirm-dialog">
+                    <h1>{this.state.title}</h1>
+                    <p>{this.state.description}</p>
+                    <div className="d-grid gap-2 d-md-flex justify-content-md-end">
                         <button className="btn btn-outline-secondary me-md-2" style={buttonStyle} onClick={() => this.close(true) }>Cancel</button>
                         <button className="btn btn-outline-primary" style={buttonStyle} onClick={() => this.close(false) }>OK</button>
                     </div>

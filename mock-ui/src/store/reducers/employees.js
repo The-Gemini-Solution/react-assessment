@@ -1,4 +1,4 @@
-import { EMPLOYEES_ERROR, EMPLOYEES_LIST } from '../actions/types';
+import { EMPLOYEES_ERROR, SET_EMPLOYEES_LIST } from '../actions/types';
 
 const initialState = {
     error: null,
@@ -14,7 +14,7 @@ export default function(state = initialState, action) {
                 error: action.payload
             }
 
-        case EMPLOYEES_LIST: {
+        case SET_EMPLOYEES_LIST: {
             return {
                 ...state,
                 list: [...action.payload]
