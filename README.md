@@ -10,8 +10,9 @@ The react app is a little out of date & makes use of class based components to b
 Refactor the react app to make use of functional components & hooks for maintaining the component state. You do *not* need to write tests to cover all scenarios or components, however some tests are required.
 
 ## Instructions
-
-To run the apps from the root you can use 1 of the following:
+- Create a fork of this repository in your own GitHub account
+- Once complete, please send a link to your repository to tim@geminisolution.co.za and CC: elrika@geminisolution.co.za.
+- To run the apps from the root you can use 1 of the following:
 
 ### Yarn
 * `yarn --cwd ./mock-api start` : starts up the mock api at `http://localhost:3000`
