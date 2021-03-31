@@ -33,7 +33,7 @@ class FormDialog extends Component {
     }
 
     render() {
-        const employeeView = React.cloneElement(
+        const formView = React.cloneElement(
             React.Children.only(this.props.children),
             { 
                 onCancel: () => this.close(),
@@ -48,7 +48,7 @@ class FormDialog extends Component {
             { 
                 this.state.isOpen && (
                     <Dialog aria-label="confirm-dialog">
-                        { employeeView }
+                        { formView }
                     </Dialog>
                 )
             }
